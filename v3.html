@@ -133,20 +133,8 @@
   .section-head .eyebrow{margin-bottom:10px;}
   .section-head h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;}
 
-  /* ---------- idea band (dark statement) ---------- */
-  .idea-band{background:var(--ink);color:var(--paper);text-align:center;}
-  .idea-band .wrap{max-width:760px;}
-  .idea-band h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;margin-bottom:16px;color:var(--paper);}
-  .idea-band p{color:rgba(251,243,226,.82);font-size:17px;}
-
-  /* ---------- why-different blurb ---------- */
-  .session-blurb{text-align:center;}
-  .session-blurb .wrap{max-width:760px;}
-  .session-blurb p{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.6vw,27px);line-height:1.45;color:var(--ink);}
-  .session-blurb .mark{color:var(--rust);}
-
-  /* ---------- card grid (together / how-it-works) ---------- */
-  .together{background:var(--sand);}
+  /* ---------- three questions ---------- */
+  .questions{background:var(--sand);}
   .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   .card{
     background:var(--paper);
@@ -158,12 +146,17 @@
   .card h3{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.35;margin-bottom:8px;}
   .card p{font-size:14.5px;color:#4a392a;}
 
-  /* ---------- areas we can explore (icon row) ---------- */
-  .areas{background:var(--paper);}
-  .area-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;}
-  .area-card{background:var(--sand);border-radius:18px;padding:24px 18px;text-align:center;}
-  .area-card .icon{width:30px;height:30px;margin:0 auto 14px;color:var(--rust);}
-  .area-card h3{font-size:15px;font-weight:700;}
+  /* ---------- session blurb ---------- */
+  .session-blurb{text-align:center;}
+  .session-blurb .wrap{max-width:760px;}
+  .session-blurb p{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.6vw,27px);line-height:1.45;color:var(--ink);}
+  .session-blurb .mark{color:var(--rust);}
+
+  /* ---------- what to expect (icon row) ---------- */
+  .expect{background:var(--paper);}
+  .expect-card .icon-box{width:34px;height:34px;margin-bottom:16px;color:var(--forest);}
+  .expect-card .icon-box svg{width:100%;height:100%;}
+  .expect-card h3{font-size:17px;}
 
   /* ---------- how it works (numbered steps) ---------- */
   .how{background:var(--sand);}
@@ -188,38 +181,27 @@
   .about-body .note .inline-link{text-decoration:underline;text-decoration-color:var(--rust);text-underline-offset:3px;}
   .about-body .note .inline-link:hover{color:var(--rust);}
 
-  /* ---------- who it's for ---------- */
-  .who{background:var(--paper);}
-  .who-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;max-width:680px;}
-  .who-list li{display:flex;gap:12px;font-size:16px;color:#3a2a1d;}
-  .who-list li svg{width:20px;height:20px;flex:none;margin-top:3px;color:var(--rust);}
-
-  /* ---------- faq ---------- */
-  .faq{background:var(--sand);}
-  .faq-list{display:flex;flex-direction:column;max-width:760px;}
-  .faq-item{border-bottom:1px solid rgba(36,23,16,.18);}
-  .faq-item summary{
-    display:flex;align-items:center;justify-content:space-between;gap:16px;
-    padding:20px 2px;cursor:pointer;list-style:none;
-    font-family:var(--display);font-weight:700;font-size:16.5px;color:var(--ink);
-  }
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item .plus{flex:none;width:20px;height:20px;position:relative;}
-  .faq-item .plus::before,.faq-item .plus::after{content:"";position:absolute;background:var(--rust);border-radius:2px;}
-  .faq-item .plus::before{top:50%;left:0;width:100%;height:2.5px;transform:translateY(-50%);}
-  .faq-item .plus::after{left:50%;top:0;height:100%;width:2.5px;transform:translateX(-50%);transition:transform .15s ease;}
-  .faq-item[open] .plus::after{transform:translateX(-50%) rotate(90deg);}
-  .faq-item .faq-body{padding:0 2px 20px;font-size:15px;color:#3a2a1d;max-width:680px;}
-
   /* ---------- final cta (dark, offer-style) ---------- */
   .offer{background:var(--ink);color:var(--paper);text-align:center;}
   .offer .wrap{max-width:640px;}
+  .offer .offer-eyebrow{color:var(--amber);}
   .offer h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;color:var(--paper);margin-bottom:14px;}
-  .offer .offer-sub{color:rgba(251,243,226,.75);font-size:16px;margin-bottom:30px;}
-  .offer .price-row{display:flex;align-items:baseline;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:26px;}
+  .offer .offer-sub{color:rgba(251,243,226,.75);font-size:16px;margin-bottom:10px;}
+  .offer .price-row{display:flex;align-items:baseline;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:22px;}
   .offer .price-old{font-family:var(--display);font-size:22px;color:rgba(251,243,226,.45);text-decoration:line-through;}
   .offer .price-new{font-family:var(--display);font-weight:800;font-size:44px;color:var(--paper);}
-  .offer .dates{margin-top:8px;font-size:14px;color:rgba(251,243,226,.65);}
+  .coupon{
+    margin:18px auto 0;display:inline-flex;align-items:center;gap:10px;
+    background:rgba(226,147,44,.14);border:1px dashed var(--amber);
+    padding:8px 16px;border-radius:12px;font-size:14px;color:var(--amber);font-weight:600;
+  }
+  .coupon code{font-family:var(--display);font-weight:800;letter-spacing:.04em;}
+  .offer-details{
+    list-style:none;margin:28px auto 30px;padding:0;max-width:440px;
+    display:flex;flex-direction:column;gap:12px;text-align:left;
+  }
+  .offer-details li{display:flex;gap:10px;font-size:15px;color:rgba(251,243,226,.85);}
+  .offer-details li svg{width:18px;height:18px;flex:none;margin-top:2px;color:var(--amber);}
 
   /* ---------- footer ---------- */
   .site-footer{padding:40px 0;border-top:1px solid rgba(36,23,16,.1);}
@@ -229,14 +211,12 @@
   @media (max-width:860px){
     .main-nav{display:none;}
     .card-grid,.how-row{grid-template-columns:1fr;}
-    .area-grid{grid-template-columns:repeat(2,1fr);}
     .about-grid{grid-template-columns:1fr;}
     .about-photo{width:160px;}
   }
   @media (max-width:520px){
     .hero{padding:52px 0 44px;}
     section{padding:48px 0;}
-    .area-grid{grid-template-columns:1fr 1fr;}
   }
 </style>
 </head>
@@ -249,10 +229,9 @@
       <span class="name">April Fletcher</span>
     </div>
     <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="#explore">What We Explore</a>
       <a href="#conversation">The Conversation</a>
-      <a href="#faq">FAQ</a>
+      <a href="#about">About</a>
+      <a href="#expect">What to Expect</a>
     </nav>
     <a href="https://tidycal.com/creativeequityhub/whats-next-exploring-new-possibilities-after-retirement" class="btn btn-ghost" data-book-btn>Book Your Consultation</a>
   </div>
@@ -262,15 +241,15 @@
   <div class="hero-motif" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-inner">
-      <span class="eyebrow">A private, one-on-one consultation</span>
-      <h1>Turn Your Experience Into <em>What's Next</em></h1>
-      <p class="hero-lede">A private, one-on-one consultation to explore practical ways to use your knowledge, skills and interests — now.</p>
+      <span class="eyebrow">A private, one-hour session</span>
+      <h1>What Else Could You Do With <em>What You Know?</em></h1>
+      <p class="hero-lede">After years of building professional knowledge and experience, you may be wondering what else you could do with what you know. Or maybe you have expertise in something you've done for years and now have the time to explore the possibilities.</p>
+      <p class="hero-lede">You can spend months figuring out how to turn your knowledge, skills, or interests into something online. Or you can start with someone who's already spent 15 years exploring the possibilities.</p>
       <div class="chip-row">
-        <span class="chip">Online &amp; Digital Work</span>
-        <span class="chip">Teaching &amp; Consulting</span>
-        <span class="chip">Creative Projects</span>
-        <span class="chip">Content &amp; Media</span>
-        <span class="chip">Other Possibilities</span>
+        <span class="chip">Teaching</span>
+        <span class="chip">Digital products</span>
+        <span class="chip">A YouTube channel</span>
+        <span class="chip">An independent project</span>
       </div>
       <div class="hero-cta">
         <a href="https://tidycal.com/creativeequityhub/whats-next-exploring-new-possibilities-after-retirement" class="btn btn-primary" data-book-btn>
@@ -283,88 +262,32 @@
   </div>
 </section>
 
-<section class="idea-band" id="conversation">
+<section class="questions" id="conversation">
   <div class="wrap">
-    <h2>You Bring the Idea. We Explore the Possibilities.</h2>
-    <p>Whether you're approaching retirement, have a creative idea you've been carrying around, or simply want to see what else is possible, we'll look at realistic options, connect the dots, and map practical next steps that fit your life and interests.</p>
+    <div class="section-head">
+      <span class="eyebrow">Maybe you're already asking</span>
+      <h2>Where do you even begin?</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-num">01</span>
+        <h3>Where do you begin?</h3>
+      </div>
+      <div class="card">
+        <span class="card-num">02</span>
+        <h3>Which opportunities make sense for your experience?</h3>
+      </div>
+      <div class="card">
+        <span class="card-num">03</span>
+        <h3>What does it take to reach an audience?</h3>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="session-blurb">
   <div class="wrap">
-    <p>It's a focused, private space to think out loud, make sense of your ideas, and get practical, personalized guidance. We look at what you know, what you enjoy, and what's possible now — and turn that into <span class="mark">clear, realistic next steps</span>.</p>
-  </div>
-</section>
-
-<section class="together">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">What this looks like together</span>
-      <h2>What We Can Work Through Together</h2>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <span class="card-num">01</span>
-        <h3>Clarify Your Idea</h3>
-        <p>Shape what you're thinking about and define the opportunity.</p>
-      </div>
-      <div class="card">
-        <span class="card-num">02</span>
-        <h3>Explore Options</h3>
-        <p>Look at realistic paths that fit your skills, interests and life now.</p>
-      </div>
-      <div class="card">
-        <span class="card-num">03</span>
-        <h3>Use What You Know</h3>
-        <p>Build on your experience, background and strengths.</p>
-      </div>
-      <div class="card">
-        <span class="card-num">04</span>
-        <h3>Plan Next Steps</h3>
-        <p>Turn ideas into a simple, manageable action plan.</p>
-      </div>
-      <div class="card">
-        <span class="card-num">05</span>
-        <h3>Navigate Trade-Offs</h3>
-        <p>Talk through practical considerations like time, resources and fit.</p>
-      </div>
-      <div class="card">
-        <span class="card-num">06</span>
-        <h3>Find What Fits</h3>
-        <p>Identify a direction that feels meaningful, doable and sustainable.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="areas" id="explore">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Where we can look</span>
-      <h2>Areas We Can Explore</h2>
-    </div>
-    <div class="area-grid">
-      <div class="area-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M2 20h20"/></svg>
-        <h3>Online &amp; Digital Work</h3>
-      </div>
-      <div class="area-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><circle cx="18" cy="9" r="2.4"/><path d="M15.5 14.2c2.6.4 5 2.3 5 5.8"/></svg>
-        <h3>Teaching &amp; Consulting</h3>
-      </div>
-      <div class="area-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 21h8M12 17v4"/><path d="M10.5 9l3 2-3 2z"/></svg>
-        <h3>Creative Projects</h3>
-      </div>
-      <div class="area-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5"/></svg>
-        <h3>Content &amp; Media</h3>
-      </div>
-      <div class="area-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-4 2 2-6z"/></svg>
-        <h3>Other Possibilities</h3>
-      </div>
-    </div>
+    <p>In this private, personalized <span class="mark">one-hour session</span>, we'll discuss your ideas, explore practical possibilities and answer questions about the technology, platforms and business considerations involved.</p>
   </div>
 </section>
 
@@ -412,80 +335,71 @@
   </div>
 </section>
 
-<section class="who">
+<section class="expect" id="expect">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Is this for you?</span>
-      <h2>Who It's For</h2>
+      <span class="eyebrow">What to expect</span>
+      <h2>A thoughtful, practical conversation.</h2>
     </div>
-    <ul class="who-list">
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-        People approaching retirement who want to explore what's next.
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-        People with a creative idea, project or interest they'd like to pursue.
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-        People who want to make better use of their experience, skills and knowledge.
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-        Anyone who is ready to think through realistic, meaningful possibilities.
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section class="faq" id="faq">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Good to know</span>
-      <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>What happens during the consultation?<span class="plus"></span></summary>
-        <div class="faq-body">We'll talk through your idea, your background and what you're hoping to explore. From there, we look at realistic options and map out practical next steps you can act on.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Do I need a fully formed idea to book?<span class="plus"></span></summary>
-        <div class="faq-body">Not at all. Many people come in with a general direction or just a sense that they want something different — that's a great place to start.</div>
-      </details>
-      <details class="faq-item">
-        <summary>How should I prepare?<span class="plus"></span></summary>
-        <div class="faq-body">Just bring your experience, your ideas and your questions. If you have specific goals or constraints in mind, jotting a few notes beforehand can help us make the most of the time.</div>
-      </details>
-      <details class="faq-item">
-        <summary>What happens after the conversation?<span class="plus"></span></summary>
-        <div class="faq-body">You'll leave with clarity on realistic next steps. There's no program or ongoing commitment — you decide what, if anything, to pursue from there.</div>
-      </details>
+    <div class="card-grid">
+      <div class="card expect-card">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3>Phone or video</h3>
+        <p>We meet however you're most comfortable — whichever you prefer.</p>
+      </div>
+      <div class="card expect-card">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>No course. No program.</h3>
+        <p>Just a thoughtful, practical conversation focused on your situation — no ongoing commitment.</p>
+      </div>
+      <div class="card expect-card">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3>Bring what you've got</h3>
+        <p>Bring your experience, your ideas and your questions. That's all you need.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="offer" id="offer">
   <div class="wrap">
-    <h2>Ready to Explore What's Next?</h2>
-    <p class="offer-sub">Book your New Possibilities consultation today.</p>
-    <a href="https://tidycal.com/creativeequityhub/whats-next-exploring-new-possibilities-after-retirement" class="btn btn-primary" data-book-btn>
-      Book Your Consultation
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
+    <span class="eyebrow offer-eyebrow">Limited-time introductory offer · November 1–15</span>
+    <h2>Ready to Book Your Session?</h2>
+    <p class="offer-sub">In this private, one-hour session, we'll turn what you know into a practical plan for what's next online.</p>
     <div class="price-row">
       <span class="price-old">$500</span>
       <span class="price-new">$300</span>
     </div>
-    <p class="dates">Introductory rate through November 15, 2026.</p>
+    <div class="coupon">Use code <code>FUN</code> at checkout for $200 off</div>
+    <ul class="offer-details">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        One private, personalized 60-minute session
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Free rescheduling with at least 24 hours' notice
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Full refund with at least 24 hours' notice
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Full details arrive with your booking confirmation
+      </li>
+    </ul>
+    <a href="https://tidycal.com/creativeequityhub/whats-next-exploring-new-possibilities-after-retirement" class="btn btn-primary" data-book-btn>
+      Book Your Consultation
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap">
     <span class="brand"><span class="name" style="font-size:15px;">New Possibilities · April Fletcher</span></span>
-    <p>Explore · Connect · Create What's Next</p>
+    <p>© 2026 April Fletcher</p>
   </div>
 </footer>
 
